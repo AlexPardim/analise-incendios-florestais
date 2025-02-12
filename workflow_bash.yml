@@ -1,0 +1,14 @@
+name: Executar Script Bash
+
+on: [push]
+
+jobs:
+  executar-bash:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checar o código
+        uses: actions/checkout@v2
+
+      - name: Executar script de bash
+        run: ./scripts/meu_script.sh
